@@ -1,9 +1,23 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../types";
+import SubHeader from "./SubHeader";
+import Header from "./Header";
+import Breadcrumb from "./Breadcrumb";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
 function Layout({ children }: { children: React.ReactNode }) {
+  const cartItems = useSelector((state: RootState) => state?.cart?.items);
+
   return (
-    <div className="px-8 md:px-0 md:max-w-7xl mx-auto poppins-medium">
-      {children}
+    <div className="">
+      <MaxWidthWrapper>
+        <SubHeader cartItems={cartItems} />
+        <Header />
+      </MaxWidthWrapper>
+      <Breadcrumb />
+
+      <MaxWidthWrapper>{children}</MaxWidthWrapper>
     </div>
   );
 }
