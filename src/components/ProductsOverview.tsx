@@ -1,4 +1,5 @@
 import { Product } from "../types";
+import Hero from "./Hero";
 import Sidebar from "./Sidebar";
 import ProductCart from "./product-cart/ProductCart";
 
@@ -20,8 +21,8 @@ function ProductsOverview({
         ) : error ? (
           <p>Error: {error.message}</p>
         ) : null}
-        <div>
-          {/* <Hero /> */}
+        <div className="space-y-8">
+          <Hero />
           {data && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {data?.map((d: Product) => (
