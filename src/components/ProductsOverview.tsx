@@ -21,7 +21,7 @@ function ProductsOverview({
           {loading ? (
             <p className="flex w-full">Loading...</p>
           ) : error ? (
-            <p>Error: {error.message}</p>
+            <p>Error on fetching products.</p>
           ) : null}
           {data && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
