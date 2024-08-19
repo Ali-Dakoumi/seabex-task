@@ -1,18 +1,8 @@
-import { combineReducers, createStore, compose } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
+import cartSlice from "../slices/cart";
 
-import { cartReducer } from "../reducers";
-
-export const rootReducer = combineReducers({
-  cart: cartReducer,
+export default configureStore({
+  reducer: {
+    cart: cartSlice,
+  },
 });
-
-interface WindowWithDevToolsExtension extends Window {
-  __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-}
-
-const composeEnhancers =
-  (window as WindowWithDevToolsExtension)
-    .__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer, composeEnhancers());
-
-export default store;

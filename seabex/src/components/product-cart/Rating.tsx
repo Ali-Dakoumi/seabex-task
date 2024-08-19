@@ -1,8 +1,8 @@
 import React from "react";
 
 interface RatingProps {
-  rating: number; // Rating out of 5
-  maxStars?: number; // Optional, default is 5
+  rating: number;
+  maxStars?: number;
 }
 
 const Rating: React.FC<RatingProps> = ({ rating, maxStars = 5 }) => {

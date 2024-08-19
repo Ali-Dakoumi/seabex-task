@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./storybook"],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -19,11 +20,20 @@ export default {
         gold: {
           DEFAULT: "#FFC600",
         },
+        iconColor: {
+          DEFAULT: "#33A0FF",
+        },
         grayStar: {
           DEFAULT: "#C1C8CE",
         },
         bgColor: {
           DEFAULT: "#F6F7F8",
+        },
+        bgRed: {
+          DEFAULT: "#FF4858",
+        },
+        textColor: {
+          DEFAULT: "#262626",
         },
       },
       borderColor: (theme) => ({

@@ -1,7 +1,11 @@
 import React from "react";
 
 function Layout({ children }: { children: React.ReactNode }) {
-  return <div className="max-w-6xl md:max-w-7xl mx-auto">{children}</div>;
+  return (
+    <div className="px-8 md:px-0 md:max-w-7xl mx-auto poppins-medium">
+      {children}
+    </div>
+  );
 }
 
 export default Layout;

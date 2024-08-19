@@ -6,3 +6,14 @@ export type Product = {
   description: string;
   image: string;
 };
+
+export interface CartItem {
+  product: Product;
+  quantity: number;
+}
+
+export interface RootState {
+  cart: {
+    items: CartItem[];
+  };
+}

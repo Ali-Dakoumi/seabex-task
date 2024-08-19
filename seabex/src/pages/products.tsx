@@ -7,10 +7,7 @@ function Products() {
     "https://fakestoreapi.com/products?limit=5"
   );
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
-  return <ProductsOverview data={data || []} />;
+  return <ProductsOverview loading={loading} error={error} data={data || []} />;
 }
 
 export default Products;

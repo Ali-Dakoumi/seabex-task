@@ -16,10 +16,11 @@ const priceStyles = cva("text-lg font-semibold", {
 });
 
 interface PriceProps extends VariantProps<typeof priceStyles> {
-  children?: string;
+  children?: React.ReactNode;
+  variant?: "normal" | "linethrough" | "percentOff";
 }
 
-const Price: React.FC<PriceProps> = ({ children, variant }) => {
+const Price: React.FC<PriceProps> = ({ children, variant = "normal" }) => {
   return <span className={cn(priceStyles({ variant }))}>{children}</span>;
 };
 
