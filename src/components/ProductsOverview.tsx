@@ -1,7 +1,7 @@
 import { Product } from "../types";
 import Hero from "./Hero";
-import Sidebar from "./Sidebar";
 import ProductCart from "./product-cart/ProductCart";
+import Sidebar from "./Sidebar";
 
 function ProductsOverview({
   data,
@@ -16,13 +16,13 @@ function ProductsOverview({
     <>
       <div className="flex gap-4">
         <Sidebar />
-        {loading ? (
-          <p>Loading...</p>
-        ) : error ? (
-          <p>Error: {error.message}</p>
-        ) : null}
-        <div className="space-y-8">
+        <div className="space-y-8 w-full">
           <Hero />
+          {loading ? (
+            <p className="flex w-full">Loading...</p>
+          ) : error ? (
+            <p>Error: {error.message}</p>
+          ) : null}
           {data && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {data?.map((d: Product) => (
