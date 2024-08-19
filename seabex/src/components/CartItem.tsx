@@ -13,7 +13,7 @@ function CartItem({ product }: { product: ICartItem }) {
   return (
     <li className="w-full grid grid-cols-[50px_1fr_100px_200px_100px] items-center">
       <button onClick={handleRemoveItem} className="w-full">
-        <img src="/images/images/delete.svg" alt="delete icon" />
+        <img src="/images/delete.svg" alt="delete icon" />
       </button>
       <div className="flex items-center gap-4">
         <img
