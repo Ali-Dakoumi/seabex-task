@@ -1,5 +1,5 @@
-import { CartItem as ICartItem } from "../../types";
-import CartItem from "./CartItem";
+import { CartItem as ICartItem } from "../types";
+import CartItem from "./cart-page/CartItem";
 
 function CartItems({ cartItems }: { cartItems: ICartItem[] }) {
   console.log("🚀 ~ CartItems ~ cartItems:", cartItems);
