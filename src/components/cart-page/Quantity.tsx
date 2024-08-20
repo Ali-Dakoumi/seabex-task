@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { increaseItemQuantity, decreaseItemQuantity } from "../slices/cart";
+import { increaseItemQuantity, decreaseItemQuantity } from "../../slices/cart";
 
 function Quantity({ id, quantity }: { id: string; quantity: number }) {
   const dispatch = useDispatch();

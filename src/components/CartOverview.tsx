@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../types";
-import Total from "./Total";
-import Coupon from "./Coupon";
-import CartItems from "./CartItems";
+import Total from "./cart-page/Total";
+import Coupon from "./cart-page/Coupon";
+import CartItems from "./cart-page/CartItems";
 
 function CartOverview() {
   const cartItems = useSelector((state: RootState) => state?.cart?.items);

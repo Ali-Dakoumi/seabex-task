@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
-import { CartItem as ICartItem } from "../types";
+import { CartItem as ICartItem } from "../../types";
 import Quantity from "./Quantity";
-import { removeItem } from "../slices/cart";
+import { removeItem } from "../../slices/cart";
 
 function CartItem({ product }: { product: ICartItem }) {
   const dispatch = useDispatch();

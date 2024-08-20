@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { CartItem } from "../types";
-import Modal from "./Modal";
+import { CartItem } from "../../types";
+import Modal from "../Modal";
 
 function Total({ cartItems }: { cartItems: CartItem[] }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
